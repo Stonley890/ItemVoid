@@ -1,0 +1,19 @@
+main: io.github.stonley890.itemvoid.ItemVoid
+name: ItemVoid
+version: 1.0.0
+description: A Bukkit plugin that removes blacklisted items from players.
+author: Stonley890
+
+commands:
+  itemblacklist:
+    description: Access the item blacklist
+    usage: /<command>
+    permission: itemvoid.manageblacklist
+
+permissions:
+  itemvoid.manageblacklist:
+    description: Allows the itemblacklist command
+    default: op
+  itemvoid.bypass:
+    description: Bypasses the item blacklist
+    default: op
