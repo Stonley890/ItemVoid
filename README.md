@@ -15,4 +15,4 @@ you're doing.
 #### Commands
 - `/itemblacklist` (Requires permission `itemvoid.manageblacklist`) - Opens the item blacklist GUI
 
-[A demo of the plugin functionality](https://github.com/Stonley890/ItemVoid/blob/main/ItemVoidDemoSmall.GIF)
+![A demo of the plugin functionality](https://github.com/Stonley890/ItemVoid/blob/main/ItemVoidDemoSmall.GIF)
