@@ -16,9 +16,13 @@ public class ListenInventoryClose implements Listener {
         if (!player.hasPermission("itemvoid.bypass")) {
 
             for (ItemStack item : CmdItemBlacklist.badItems) {
-                if (item != null && player.getInventory().contains(item.getType())) {
-                    player.getInventory().remove(item.getType());
+                if (item != null) {
+                    for (ItemStack content : player.getInventory().getContents()) {
+                        if (content.isSimilar(item)) {
 
+                            player.getInventory().remove(item);
+                        }
+                    }
                 }
             }
         }
