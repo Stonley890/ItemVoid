@@ -11,7 +11,7 @@ import java.util.logging.Level;
 
 /*
  * The main ticking thread.
-*/
+ */
 
 public class ItemVoid extends JavaPlugin {
 
