@@ -1,5 +1,6 @@
 package io.github.stonley890.itemvoid.listeners;
 
+import io.github.stonley890.itemvoid.ItemVoid;
 import io.github.stonley890.itemvoid.commands.CmdItemBlacklist;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,7 +18,7 @@ public class ListenInventoryClose implements Listener {
 
         if (!player.hasPermission("itemvoid.bypass")) {
 
-            for (ItemStack item : CmdItemBlacklist.badItems) {
+            for (ItemStack item : ItemVoid.badItems) {
                 if (item != null) {
                     for (ItemStack content : player.getInventory().getContents()) {
                         if (content != null && content.isSimilar(item)) {
@@ -37,7 +38,7 @@ public class ListenInventoryClose implements Listener {
             }
         }
 
-        if (event.getInventory().equals(CmdItemBlacklist.inv)) {
+        if (event.getInventory().equals(ItemVoid.inv)) {
             CmdItemBlacklist.saveItems();
         }
     }
